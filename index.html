@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./app.js" defer type="module"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Kanbanize ATM</title>
+</head>
+
+<body>
+    <div id="main">
+        <h1 class="heading">Welcome to Kanbanize ATM</h1>
+        <p class="sub-heading" id="sub-heading">Follow the instructions below to create your Virtual Bank account</p>
+
+        <div class="controls">
+
+            <section class="display" id="display">
+
+                <!-- Initial Display -->
+                <div class="inputs" id="inputs">
+                    <p class="instructions" id="instructions">
+                        Please enter your initial deposit.
+                    </p>
+                    <div class="control-wrapper" id="control">
+                        <i class="fas fa-lock" id="lock"></i>
+                        <i class="fas fa-euro-sign" id="euro"></i>
+                        <input type="text" id="control-input" value="0.00" readonly></input>
+                    </div>
+                    <div id="inputs-btn-wrapper">
+                        <button class="button" id="inputs-main-menu">
+                            Main Menu
+                        </button>
+
+                        <button class="button" id="enter-btn">
+                            enter
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Menu Display -->
+                <div class="menu" id="menu">
+
+                    <button class="button menu-btn" id="withdrawal-btn">
+                        withdrawal
+                    </button>
+
+                    <button class="button menu-btn" id="transactions">
+                        transactions
+                    </button>
+
+                </div>
+
+                <!-- Receipt Display -->
+
+                <div class="transaction" id="transaction">
+                    <p id="title">Transaction Information</p>
+                    <p>Date : <span id="date"></span></p>
+                    <p>Amount withdrawn : <span id="amount-withdrawn"></span> leva</p>
+                    <p>Notes dispensed : <span id="notes-dispensed"></span></p>
+                    <p>Balance left : <span id="balance"></span> leva</p>
+                    <p>Fee charged : <span id="fee"></span> leva</p>
+
+                    <button class="button" id="main-menu">
+                        Main Menu
+                    </button>
+
+                </div>
+
+                <ul class="transactions-history" id="transactions-history">
+
+
+                </ul>
+
+            </section>
+
+            <section class="keypad" id="keypad">
+                <div class="row">
+                    <key class="key-outter">
+                        <div class="key" id="one">1</div>
+                    </key>
+                    <key class="key-outter">
+                        <div class="key" id="two">2</div>
+                    </key>
+                    <key class="key-outter">
+                        <div class="key" id="three">3</div>
+                    </key>
+                </div>
+
+                <div class="row">
+                    <div class="key-outter">
+                        <div class="key" id="four">4</div>
+                    </div>
+                    <div class="key-outter">
+                        <div class="key" id="five">5</div>
+                    </div>
+                    <div class="key-outter">
+                        <div class="key" id="six">6</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="key-outter">
+                        <div class="key" id="seven">7</div>
+                    </div>
+                    <div class="key-outter">
+                        <div class="key" id="eight">8</div>
+                    </div>
+                    <div class="key-outter">
+                        <div class="key" id="nine">9</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="key-outter">
+                        <div class="key" id="zero">0</div>
+                    </div>
+                    <div class="key-outter" id="backspace">
+                        <div class="key backspace"><i class="fas fa-backspace"></i></div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <section class="footer">
+
+        </section>
+    </div>
+</body>
+
+</html>
